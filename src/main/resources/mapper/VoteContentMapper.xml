@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.duchenyu.dao.VoteContentDao">
+	<select id="select" resultType="VoteContent">
+		SELECT * FROM cms_vote_content
+
+	</select>
+
+	<select id="selectById" resultType="VoteContent">
+		SELECT * FROM cms_vote_content
+		WHERE id=#{id}
+
+	</select>
+
+	<update id="update">
+		UPDATE cms_vote_content
+		SET
+		title=#{title},content=#{content}
+		WHERE id=#{id}
+
+	</update>
+
+	<insert id="insert">
+		INSERT INTO cms_vote_content(title,content)VALUES
+		(#{title},#{content})
+
+	</insert>
+
+	<delete id="delete">
+		DELETE FROM cms_vote_content WHERE id in(${ids})
+
+	</delete>
+
+
+</mapper>
