@@ -63,7 +63,7 @@
 				<div class="right">
 					<div>相关文章</div>
 					<ul class="list-unstyled">
-						<c:forEach items="${relArticelList }" var="item">
+						<c:forEach items="${relArticleList }" var="item">
 							<li class="media">
 								<a href="/article/detail/${item.id }.html" target="_blank"><img src="${item.picture }" style="height: 72px; width: 72px;" class="mr-3" alt="..."></a>
 								<div class="media-body">

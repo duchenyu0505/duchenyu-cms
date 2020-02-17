@@ -73,6 +73,7 @@ public class IndexController {
 		/** 热点文章 **/
 		PageInfo<Article> hotList = articleService.getHotList(pageNum,4);
 		model.addAttribute("hotList", hotList);
+		model.addAttribute("pageInfo", hotList);
 
 		/** 最新文章 **/
 		List<Article> newArticleList = articleService.getNewList(6);
